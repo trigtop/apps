@@ -23,11 +23,11 @@ def main():
           app_name = file[0:file.rfind("-")]
           app_version = file[file.rfind("-")+1:file.rfind(".apk")]
           app_xml = ""
-          app_xml += "{\"aPP_ID\":com.trigtop." + app_name + ","
+          app_xml += "{\"aPP_ID\":\"com.trigtop." + app_name + "\","
           app_xml += "\"aPP_NAME\":" + app_name + ","
           app_xml += "\"iMAGE_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/master/" + app_name + "/" + app_name + ".png\"" + ","
           app_xml += "\"uRL_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/master/" + app_name + "/" + file + "\","
-          app_xml += "\"vER\":" + app_version
+          app_xml += "\"vER\":\"" + app_version + "\""
           appMap_xml += app_xml.rstrip() + u"},\n"
     except Exception, e:
       # missing or poorly formatted app.xml
