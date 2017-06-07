@@ -11,6 +11,7 @@ else
         echo -e "\033[32m apps.txt generate successfully \033[0m"
 fi
 git add -A
-git commit -m 'release 1.0.0'
+#git commit -m 'release 1.1.0'
+git commit --amend
 git push -f origin master:master
 
