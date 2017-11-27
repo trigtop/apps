@@ -14,8 +14,3 @@ git add -A
 #git commit -m 'release 1.1.0'
 git commit --amend
 git push -f origin master:master
-git push origin Allwinner:Allwinner
-git push origin amlogic:amlogic
-git push origin realtek:realtek
-git push origin rockchip:rockchip
-
