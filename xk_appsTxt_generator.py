@@ -34,9 +34,9 @@ def main():
           app_xml = ""
           app_xml += "{\"aPP_ID\":\"com.trigtop." + app_name + "\","
           app_xml += "\"aPP_NAME\":\"" + app_name + "\","
-          app_xml += "\"iMAGE_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Amlogic/" + app_name + "/" + app_name + ".png\","
+          app_xml += "\"iMAGE_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Ergo/" + app_name + "/" + app_name + ".png\","
           app_xml += "\"mD5\":\"" + app_md5 + "\","
-          app_xml += "\"uRL_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Amlogic/" + app_name + "/" + file + "\","
+          app_xml += "\"uRL_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Ergo/" + app_name + "/" + file + "\","
           app_xml += "\"vER\":\"" + app_version + "\""
           appMap_xml += app_xml.rstrip() + u"},\n"
     except Exception, e:
