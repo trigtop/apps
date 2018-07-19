@@ -1,1 +1,1 @@
-﻿TwlCott
+﻿appname=TwlCottdesc=TwlCott

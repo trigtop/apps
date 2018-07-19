@@ -1,1 +1,1 @@
-﻿天籁K歌APP安卓版是一款能在安卓手机上实现KTV般嗨唱效果的app.
+﻿appname=天籁K歌desc=天籁K歌APP安卓版是一款能在安卓手机上实现KTV般嗨唱效果的app.

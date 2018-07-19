@@ -1,1 +1,1 @@
-﻿AppMarket是一款APP商城应用.
+﻿appname=应用商城desc=AppMarket是一款APP商城应用.

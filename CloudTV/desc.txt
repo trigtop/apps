@@ -1,1 +1,1 @@
-﻿A super cool IPTV agents.
+﻿appname=CloudTvdesc=A super cool IPTV agents.
