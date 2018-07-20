@@ -6,6 +6,8 @@ import sys
 import md5
 
 def main():
+  reload(sys)
+  sys.setdefaultencoding('utf8')
   topdir = os.getcwd()
 
   # app list
@@ -25,6 +27,12 @@ def main():
       os.chdir(topdir + "/" + app_dir)
       files = (os.listdir('.'))
       for file in files:
+	  if(file.startswith("desc.txt")):
+              f = open("desc.txt")
+              line = f.readline()
+              aPP_NAME_extra = line[line.rfind("appname=")+8:line.rfind("desc=")]
+              f.close()
+              continue
           if(not file.startswith(app_dir + '-')):
               continue
           app_name = file[0:file.rfind("-")]
@@ -34,6 +42,7 @@ def main():
           app_xml = ""
           app_xml += "{\"aPP_ID\":\"com.trigtop." + app_name + "\","
           app_xml += "\"aPP_NAME\":\"" + app_name + "\","
+	  app_xml += "\"aPP_NAME_extra\":\"" + aPP_NAME_extra + "\","
           app_xml += "\"iMAGE_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Ergo/" + app_name + "/" + app_name + ".png\","
           app_xml += "\"mD5\":\"" + app_md5 + "\","
           app_xml += "\"uRL_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Ergo/" + app_name + "/" + file + "\","
