@@ -26,7 +26,13 @@ def main():
         continue
       os.chdir(topdir + "/" + app_dir)
       files = (os.listdir('.'))
-      for file in files:
+      filesTmp = []
+      for fileTmp in files:
+          if(fileTmp.startswith("desc.txt")):
+	      filesTmp.insert(0 , fileTmp)
+          elif(fileTmp.endswith(".apk")):
+              filesTmp.append(fileTmp)
+      for file in filesTmp:
 	  if(file.startswith("desc.txt")):
               f = open("desc.txt")
               line = f.readline()
