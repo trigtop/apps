@@ -1,1 +1,1 @@
-﻿appname=牛牛看电视desc=牛牛看电视最新版是一款汇聚了海量精彩视频资源的手机视频观看软件.
+﻿appname=牛牛看電視desc=直播電視, 請參考 https://www.gdaily.org/17862/牛牛看電視-apk

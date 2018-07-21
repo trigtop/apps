@@ -1,1 +1,1 @@
-﻿appname=TwlCottdesc=TwlCott
+﻿appname=百兔視頻desc=線上電影電視劇動漫綜藝, 美劇

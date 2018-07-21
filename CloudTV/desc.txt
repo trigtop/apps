@@ -1,1 +1,1 @@
-﻿appname=CloudTvdesc=A super cool IPTV agents.
+﻿appname=衛星電視desc=直播電視

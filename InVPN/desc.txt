@@ -1,1 +1,1 @@
-﻿appname=快帆desc=「快帆」是一款免費VPN加速軟件.
+﻿appname=快帆VPNdesc=翻進大陸

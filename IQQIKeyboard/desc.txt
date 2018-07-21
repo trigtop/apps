@@ -1,1 +1,1 @@
-﻿appname=IQQIKeyboarddesc=台湾的网际智慧公司推出的智慧型手机输入法.
+﻿appname=IQQI輸入法desc=可以用遙控器控制的中文輸入法
