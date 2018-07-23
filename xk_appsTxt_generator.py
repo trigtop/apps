@@ -28,19 +28,21 @@ def main():
       files = (os.listdir('.'))
       filesTmp = []
       for fileTmp in files:
-          if(fileTmp.startswith("desc.txt")):
+          if(fileTmp.startswith("appname.txt")):
 	      filesTmp.insert(0 , fileTmp)
           elif(fileTmp.endswith(".apk")):
               filesTmp.append(fileTmp)
+
       for file in filesTmp:
-	  if(file.startswith("desc.txt")):
-              f = open("desc.txt")
-              line = f.readline()
-              aPP_NAME_extra = line[line.rfind("appname=")+8:line.rfind("desc=")]
+	  if(file.startswith("appname.txt")):
+              f = open(file)
+              aPP_NAME_extra = f.readline()
+	      #print aPP_NAME_extra
               f.close()
               continue
           if(not file.startswith(app_dir + '-')):
               continue
+	  #print file
           app_name = file[0:file.rfind("-")]
           app_version = file[file.rfind("-")+1:file.rfind(".apk")]
           app_md5 = md5.new(open(file).read()).hexdigest()
@@ -56,6 +58,7 @@ def main():
           appMap_xml += app_xml.rstrip() + u"},\n"
     except Exception, e:
       # missing or poorly formatted app.xml
+      print e
       print "Failed to add xml"
       sys.exit(1)
   # clean and add closing tag
