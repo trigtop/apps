@@ -1,1 +1,1 @@
-﻿appname=蜜蜂市場desc=比沙發管家的市場
+﻿appname=蜜蜂市場desc=比沙發管家好用的市場
