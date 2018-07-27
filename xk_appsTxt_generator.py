@@ -30,7 +30,7 @@ def main():
       for fileTmp in files:
           if(fileTmp.startswith("appname.txt")):
 	      filesTmp.insert(0 , fileTmp)
-          elif(fileTmp.endswith(".apk")):
+          elif(fileTmp.endswith(".apk") or fileTmp.endswith(".mp4") or fileTmp.endswith(".MOV")):
               filesTmp.append(fileTmp)
 
       for file in filesTmp:
@@ -44,7 +44,12 @@ def main():
               continue
 	  #print file
           app_name = file[0:file.rfind("-")]
-          app_version = file[file.rfind("-")+1:file.rfind(".apk")]
+	  if(file.endswith(".apk")):
+              app_version = file[file.rfind("-")+1:file.rfind(".apk")]
+          elif(file.endswith(".mp4")):
+              app_version = file[file.rfind("-")+1:file.rfind(".mp4")]
+          elif(file.endswith(".MOV")):
+              app_version = file[file.rfind("-")+1:file.rfind(".MOV")]
           app_md5 = md5.new(open(file).read()).hexdigest()
           #print app_md5
           app_xml = ""
