@@ -52,17 +52,24 @@ def main():
           if(not file.startswith(app_dir + '-')):
               continue
 	  #print file
-          app_name = file[0:file.rfind("-")]
+	  first_1 = file.find("-" , 0)
+	  first_2 = file.find("-" , first_1+1)
+	  #print first_1
+	  #print first_2
+          app_name = file[0:first_1]
+	  #print app_name
+	  app_id = file[first_1+1:first_2]
+	  #print app_id
 	  if(file.endswith(".apk")):
-              app_version = file[file.rfind("-")+1:file.rfind(".apk")]
+              app_version = file[first_2+1:file.rfind(".apk")]
           elif(file.endswith(".mp4")):
-              app_version = file[file.rfind("-")+1:file.rfind(".mp4")]
+              app_version = file[first_2+1:file.rfind(".mp4")]
           elif(file.endswith(".MOV")):
-              app_version = file[file.rfind("-")+1:file.rfind(".MOV")]
+              app_version = file[first_2+1:file.rfind(".MOV")]
           app_md5 = md5.new(open(file).read()).hexdigest()
           #print app_md5
           app_xml = ""
-          app_xml += "{\"aPP_ID\":\"com.trigtop." + app_name + "\","
+          app_xml += "{\"aPP_ID\":\"" + app_id + "\","
           app_xml += "\"aPP_NAME\":\"" + app_name + "\","
 	  app_xml += "\"aPP_NAME_extra\":\"" + aPP_NAME_extra + "\","
           app_xml += "\"iMAGE_PATH\":\"https://raw.githubusercontent.com/trigtop/apps/Ergo/" + app_name + "/" + app_name + ".png\","

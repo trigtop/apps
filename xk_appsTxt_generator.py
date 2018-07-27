@@ -13,9 +13,15 @@ def main():
   # app list
   os.chdir(topdir)
   dirs = (os.listdir('.'))
+  #recommend applist
+  recommend = open("recommend.txt")
+  recommend_list = recommend.readline()
+  #print recommend_list
   # final apps text
   appMap_xml = u"["
   # loop thru and add each apps addon.xml file
+  
+  dirs.sort()
   for app_dir in dirs:
     try:
       os.chdir(topdir)
@@ -43,15 +49,28 @@ def main():
           if(not file.startswith(app_dir + '-')):
               continue
 	  #print file
-          app_name = file[0:file.rfind("-")]
+
+	  first_1 = file.find("-" , 0)
+
+	  #print first_1
+
+          first_tmp = first_1
+
+          app_name = file[0:first_1]
+	  if(recommend_list.find(app_dir) > -1):
+	      print "has recommend"
+	      first_tmp = file.find("-" , first_1+1)
+	  #print first_tmp
 	  if(file.endswith(".apk")):
-              app_version = file[file.rfind("-")+1:file.rfind(".apk")]
+              app_version = file[first_tmp+1:file.rfind(".apk")]
           elif(file.endswith(".mp4")):
-              app_version = file[file.rfind("-")+1:file.rfind(".mp4")]
+              app_version = file[first_tmp+1:file.rfind(".mp4")]
           elif(file.endswith(".MOV")):
-              app_version = file[file.rfind("-")+1:file.rfind(".MOV")]
+              app_version = file[first_tmp+1:file.rfind(".MOV")]
           app_md5 = md5.new(open(file).read()).hexdigest()
           #print app_md5
+	  #print file
+	  #print app_version
           app_xml = ""
           app_xml += "{\"aPP_ID\":\"com.trigtop." + app_name + "\","
           app_xml += "\"aPP_NAME\":\"" + app_name + "\","
