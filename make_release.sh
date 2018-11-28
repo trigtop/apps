@@ -13,5 +13,5 @@ fi
 git add -A
 #git commit -m 'release 1.1.0'
 git commit --amend
-git push -f origin Amlogic:Amlogic
+git push -f origin Amlogic_S905X2:Amlogic_S905X2
 
